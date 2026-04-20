@@ -84,7 +84,7 @@ check_bam_anno <- function(bam_file, annotation){
 #'  the annotation file
 #'@param input_annotation_format character. Can be one of "auto", "gff3" or
 #'  "gtf". This is passed to the 'format' argument of
-#'  GenomicFeatures::makeTxDbFromGFF(). This should generally just be left as
+#'  txdbmaker::makeTxDbFromGFF(). This should generally just be left as
 #'  "auto"
 #'@param ntiles integer, the number of blocks that exons and introns should be
 #'  grouped into
@@ -105,8 +105,8 @@ get_transcript_ranges <- function(input_annotation,
     print(input_annotation)
   }
   txdb <- suppressWarnings(suppressMessages(
-    GenomicFeatures::makeTxDbFromGFF(input_annotation,
-                                     format = input_annotation_format)
+    txdbmaker::makeTxDbFromGFF(input_annotation,
+                               format = input_annotation_format)
   ))
   exons <- GenomicFeatures::exonsBy(txdb, by = "tx", use.names=TRUE)
   introns <- GenomicFeatures::intronsByTranscript(txdb, use.names=TRUE)
@@ -224,7 +224,7 @@ intron_exon_overlap <- function(block,
 #'  annotation file
 #'@param annotation_format character. Can be one of "auto", "gff3" or "gtf".
 #'  This is passed to the 'format' argument of
-#'  GenomicFeatures::makeTxDbFromGFF(). THis should generally just be left as
+#'  txdbmaker::makeTxDbFromGFF(). THis should generally just be left as
 #'  "auto"
 #'@param bam character, should be a character vector pointing to the BAM file
 #'@param bam_index character, the path to the input bam file index
