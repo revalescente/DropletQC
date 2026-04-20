@@ -42,6 +42,7 @@ Imports:
     S4Vectors,
     GenomicAlignments,
     GenomicFeatures,
+    txdbmaker,
     rtracklayer,
     GenomeInfoDb,
     ks,

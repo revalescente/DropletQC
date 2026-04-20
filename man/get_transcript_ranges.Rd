@@ -17,7 +17,7 @@ the annotation file}
 
 \item{input_annotation_format}{character. Can be one of "auto", "gff3" or
 "gtf". This is passed to the 'format' argument of
-GenomicFeatures::makeTxDbFromGFF(). This should generally just be left as
+txdbmaker::makeTxDbFromGFF(). This should generally just be left as
 "auto"}
 
 \item{ntiles}{integer, the number of blocks that exons and introns should be

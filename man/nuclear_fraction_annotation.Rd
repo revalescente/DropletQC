@@ -22,7 +22,7 @@ annotation file}
 
 \item{annotation_format}{character. Can be one of "auto", "gff3" or "gtf".
 This is passed to the 'format' argument of
-GenomicFeatures::makeTxDbFromGFF(). THis should generally just be left as
+txdbmaker::makeTxDbFromGFF(). THis should generally just be left as
 "auto"}
 
 \item{bam}{character, should be a character vector pointing to the BAM file}
